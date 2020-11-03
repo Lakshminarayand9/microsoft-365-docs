@@ -66,6 +66,8 @@ The following table lists email message properties that can be searched by using
 |Size|The size of an item, in bytes.|`size>26214400`  <br/> `size:1..1048567`|Messages larger than 25??MB. The second example returns messages from 1 through 1,048,567 bytes (1 MB) in size.|
 |Subject|The text in the subject line of an email message.  <br/> **Note:** When you use the Subject property in a query, the search returns all messages in which the subject line contains the text you're searching for. In other words, the query doesn't return only those messages that have an exact match. For example, if you search for  `subject:"Quarterly Financials"`, your results will include messages with the subject "Quarterly Financials 2018".|`subject:"Quarterly Financials"`  <br/> `subject:northwind`|Messages that contain the phrase "Quarterly Financials" anywhere in the text of the subject line. The second example returns all messages that contain the word northwind in the subject line.|
 |To|The To field of an email message.<sup>1</sup>|`to:annb@contoso.com`  <br/> `to:annb ` <br/> `to:"Ann Beebe"`|All examples return messages where Ann Beebe is specified in the To: line.|
+|InternetMessageId|This is the internet message ID (also known as the Client ID) that's found in the Message-ID: header field in the message header. This value to investigate specific messages|InternetMessageId:”<d9683b4c-127b-413a-ae2e-fa7dfb32c69d@DM3NAM06BG401.Eop-nam06.prod.protection.outlook.com>” When you use Message ID to filter the results, be sure to include the full string, including any angle brackets|All examples return messages matches with MessageId d9683b4c-127b-413a-ae2e-fa7dfb32c69d@DM3NAM06BG401.Eop-nam06.prod.protection.outlook.com.|
+
 |||||
    
 > [!NOTE]
